@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import {Signup} from './pages/Signup'
 // import LandingPage from './pages/LandingPage';
 //import FeedbackStudent from './pages/FeedbackStudent';
-// import FeedbackCompany from './pages/FeedbackCompany';
+import FeedbackCompany from './pages/FeedbackCompany';
  import StudentListPage from './pages/Company/StudentListPage';
+import Dashboard from './pages/Company/Dashboard';
+
 import './App.css';
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
     // <div>
     //   <Dashboard>
     // </div>
-    <div> <StudentListPage/></div>
+    <div> <Dashboard/></div>
    
   );
 }

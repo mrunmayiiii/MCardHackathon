@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import StudentListPage from './StudentListPage';
+import { useNavigate } from "react-router-dom";
+import FeedbackCompany from './FeedbackCompany';
+ import StudentListPage from './StudentListPage';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, Legend } from 'recharts';
 import { Users, Calendar, TrendingUp, MessageSquare } from 'lucide-react';
 
 const CompanyDashboard = () => {
+  const navigate = useNavigate();
   // Sample student data - replace with your actual database data
   const [studentData] = useState([
     { id: 1, name: 'Rahul Sharma', position: 'Software Developer', startDate: '2024-01-15', endDate: '2024-04-15' },
@@ -64,7 +69,7 @@ const CompanyDashboard = () => {
   const handleFeedbackClick = () => {
     // This would typically use React Router
     alert('Redirecting to feedback form... (In a real app, this would navigate to the Company Feedback Form)');
-    // Example: navigate('/company-feedback');
+    navigate('/StudentListPage');
   };
 
   return (

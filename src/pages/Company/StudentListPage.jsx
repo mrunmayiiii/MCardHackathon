@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { ArrowLeft, MessageSquare, User, Calendar, Briefcase, Search, Filter } from 'lucide-react';
-
+import FeedbackStudent from './FeedbackStudent'
+import { useNavigate } from "react-router-dom";
+import FeedbackCompany from './FeedbackCompany';
 const StudentListPage = ({ onNavigateBack, onNavigateToFeedback }) => {
   // Sample student data - replace with your actual database data
+   const navigate = useNavigate();
   const [studentData] = useState([
     { id: 1, name: 'Rahul Sharma', position: 'Software Developer', startDate: '2024-01-15', endDate: '2024-04-15', status: 'Active' },
     { id: 2, name: 'Priya Singh', position: 'Data Analyst', startDate: '2024-02-01', endDate: '2024-05-01', status: 'Active' },
@@ -34,8 +37,7 @@ const StudentListPage = ({ onNavigateBack, onNavigateToFeedback }) => {
 
   const handleSendFeedback = (student) => {
     // Store selected student data (you might want to use context or props)
-    sessionStorage.setItem('selectedStudent', JSON.stringify(student));
-    onNavigateToFeedback(student);
+    navigate('/FeedbackStudent');
   };
 
   const getStatusBadge = (status) => {
