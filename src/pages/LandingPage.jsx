@@ -58,7 +58,7 @@ const LandingPage = () => {
               
               <button 
                 className='px-8 py-3 bg-black text-white rounded-full font-medium text-base hover:bg-gray-800 transition-colors duration-300'
-                onClick={() => navigate('/dashboard')}
+                onClick={() => navigate('/signup')}
               >
                 Get Started
               </button>
